@@ -5,7 +5,7 @@ Surgically inject a System.loadLibrary() into a dex.
 The following program can be used to inject a `System.loadLibrary()` call into the `<clinit>` of the specified class in a COMPILED dex.
 Thanks to [dexlib2](https://github.com/JesusFreke/smali/tree/master/dexlib2), that performs direct bytecode manipulation, this avoids decompilation/recompilation errors and preserves original obfuscation and optimizations.
 
-Here is used to inject a `System.loadLibrary("frida-gadget")` call in a suitable place that typically is the static initializer of the entry point class of an app (e.g. the main application Activity).
+Here is used to inject a `System.loadLibrary("frida-gadget")` call in a suitable place that typically is the static initializer of the main application Activity.
 ## Usage
 ```
 java -jar dexpatch.jar input.dex output.dex com/ax/example/MainActivity
